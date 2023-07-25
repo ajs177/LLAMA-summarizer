@@ -111,7 +111,7 @@ Refer to the Provided Files table below to see what files use which methods, and
 I use the following command line; adjust for your tastes and needs:
 
 ```
-./main -t 10 -ngl 32 -m llama-2-7b-chat.ggmlv3.q4_0.bin --color -c 2048 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write a story about llamas\n### Response:"
+./main -t 10 -ngl 32 -m llama-2-7b-chat.ggmlv3.q4_0.bin --color -c 4096 --temp 0.7 --repeat_penalty 1.1 -n -1 --in-prefix-bos --in-prefix ' [INST] ' --in-suffix ' [/INST]' -i -p "[INST] <<SYS>> You are a helpful, respectful and honest assistant. <</SYS>> Write a story about llamas. [/INST]"
 ```
 Change `-t 10` to the number of physical CPU cores you have. For example if your system has 8 cores/16 threads, use `-t 8`.
 
