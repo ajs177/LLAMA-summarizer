@@ -123,6 +123,22 @@ If you want to have a chat-style conversation, replace the `-p <PROMPT>` argumen
 
 Further instructions here: [text-generation-webui/docs/llama.cpp-models.md](https://github.com/oobabooga/text-generation-webui/blob/main/docs/llama.cpp-models.md).
 
+## How to make changes. 
+
+Downloading GGML files from repositories can be done in a more efficient way than using git clone. Here's how:
+
+1. Avoid Git Clone: It's not recommended to use git clone for GGML repositories as it downloads all files, resulting in unnecessary data storage.
+2. Use wget or Download Client: Instead, use the wget command or any download client to directly grab the specific file you need. This prevents excessive data usage and storage.
+3. Python Code Option: If you prefer Python, you can use the hf_hub_download function from huggingface_hub. Here's an example:
+
+```
+from huggingface_hub import hf_hub_download
+hf_hub_download(repo_id='TheBloke/Llama-2-7B-Chat-GGML', filename='llama-2-7b-chat.ggmlv3.q4_K_M.bin')
+#This code snippet downloads the specified GGML file directly.
+```
+
+4. Inference from Python: If you plan to perform inference from Python, the ctransformers Python library is a convenient option. It handles automatic file downloads for GGML inference.
+
 <!-- footer start -->
 ## Discord
 
