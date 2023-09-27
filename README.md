@@ -1,21 +1,22 @@
 ---
-arxiv: 2307.09288
-inference: false
 language:
 - en
 license: other
-model_creator: Meta Llama 2
-model_link: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf
-model_name: Llama 2 7B Chat
-model_type: llama
-pipeline_tag: text-generation
-quantized_by: TheBloke
 tags:
 - facebook
 - meta
 - pytorch
 - llama
 - llama-2
+model_name: Llama 2 7B Chat
+arxiv: 2307.09288
+inference: false
+model_creator: Meta Llama 2
+model_link: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf
+model_type: llama
+pipeline_tag: text-generation
+quantized_by: TheBloke
+base_model: meta-llama/Llama-2-7b-chat-hf
 ---
 
 <!-- header start -->
