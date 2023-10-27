@@ -2,6 +2,8 @@
 language:
 - en
 license: other
+license_name: llama
+license_link: https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/LICENSE
 tags:
 - facebook
 - meta
