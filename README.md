@@ -2,6 +2,8 @@
 language:
 - en
 license: other
+license_name: bloomchat-176b
+license_link: https://huggingface.co/sambanovasystems/BLOOMChat-176B-v1/blob/main/LICENSE
 tags:
 - facebook
 - meta
