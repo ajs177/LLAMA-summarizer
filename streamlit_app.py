@@ -31,7 +31,7 @@ llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-Chat-GGML", mode
  
 # Aplica el modelo LLM a nuestro documento
 def chains_and_response(docs):
-    llm = load_llm()
+    # llm = load_llm()
     chain = load_summarize_chain(llm, chain_type='map_reduce')
     return chain.run(docs)
     
