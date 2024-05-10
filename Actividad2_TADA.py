@@ -16,12 +16,9 @@ def chunks_and_document(txt):
     
 # Carga del modelo Llama 2
 def load_llm():
-    current_dir = os.path.dirname(os.path.abspath(__file__))  # Obtiene la ruta del directorio actual
-    model_path = os.path.join(current_dir, 'llama-2-7b-chat.ggmlv3.q2_K.bin')  # Une la ruta del directorio actual con la ruta relativa del archivo .bin
-
     callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
     llm = CTransformers(
-        model=model_path,  # Usa la ruta del modelo actualizada
+        model='llama-2-7b-chat.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
         model_type="llama",
         max_new_tokens=512,
         temperature=0.5
