@@ -7,6 +7,7 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain_community.llms import CTransformers
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from ctransformers import AutoModelForCausalLM
 
 # Divide el texto en fragmentos y los convierte en formato de documento
 def chunks_and_document(txt):
@@ -16,15 +17,16 @@ def chunks_and_document(txt):
     return docs
     
 # Carga del modelo Llama 2
-def load_llm():
-    callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
-    llm = CTransformers(
-        model='llama-2-7b-chat.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
-        model_type="llama",
-        max_new_tokens=512,
-        temperature=0.5
+# def load_llm():
+#    callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
+#    llm = CTransformers(
+#        model='llama-2-7b-chat.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
+#        model_type="llama",
+#        max_new_tokens=512,
+#        temperature=0.5
     )
-    return llm
+#    return llm
+llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-Chat-GGML", model_file="llama-2-7b-chat.ggmlv3.q8_0.bin")
 
  
 # Aplica el modelo LLM a nuestro documento
