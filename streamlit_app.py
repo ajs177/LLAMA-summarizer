@@ -17,21 +17,21 @@ def chunks_and_document(txt):
     return docs
     
 # Carga del modelo Llama 2
-# def load_llm():
-#    callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
-#    llm = CTransformers(
-#        model='llama-2-7b-chat.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
-#        model_type="llama",
-#        max_new_tokens=512,
-#        temperature=0.5
-#    )
-#    return llm
-llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-Chat-GGML", model_file="llama-2-7b-chat.ggmlv3.q8_0.bin")
+def load_llm():
+   callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
+    llm = CTransformers(
+       model='llama-2-7b-chat.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
+       model_type="llama",
+       max_new_tokens=512,
+       temperature=0.5
+    )
+    return llm
+# llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-Chat-GGML", model_file="llama-2-7b-chat.ggmlv3.q8_0.bin")
 
  
 # Aplica el modelo LLM a nuestro documento
 def chains_and_response(docs):
-    # llm = load_llm()
+    llm = load_llm()
     chain = load_summarize_chain(llm, chain_type='map_reduce')
     return chain.run(docs)
     
