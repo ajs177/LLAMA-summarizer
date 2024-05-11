@@ -2,3 +2,4 @@ streamlit
 langchain
 transformers
 ctransformers
+llama-cpp-python==0.1.49
