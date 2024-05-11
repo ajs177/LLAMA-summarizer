@@ -1,3 +1,19 @@
 {
-    "model_type": "llama"
+    "model_type": "llama",
+    "model_name_or_path": "llama-2-7b-chat.ggmlv3.q2_K.bin",
+    "output_hidden_states": false,
+    "output_attentions": false,
+    "use_cache": true,
+    "num_labels": 1,
+    "finetuning_task": null,
+    "is_decoder": false,
+    "max_length": 512,
+    "pad_token_id": null,
+    "bos_token_id": null,
+    "eos_token_id": null,
+    "do_sample": true,
+    "temperature": 0.5,
+    "top_k": 50,
+    "top_p": 1.0
 }
+
