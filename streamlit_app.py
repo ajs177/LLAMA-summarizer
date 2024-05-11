@@ -24,7 +24,7 @@ def load_llm():
        model_type="llama",
        max_new_tokens=512,
        temperature=0.5
-    )
+            )
     return llm
 # llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-Chat-GGML", model_file="llama-2-7b-chat.ggmlv3.q8_0.bin")
 
