@@ -1,5 +1,7 @@
-streamlit
-langchain
-transformers
-ctransformers
+streamlit==1.31.0
+langchain==0.1.6
+langchain-community==0.0.19
+langchain-core==0.1.22
+transformers==4.37.2
+ctransformers==0.2.27
 llama-cpp-python==0.1.52
